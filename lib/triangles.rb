@@ -9,4 +9,19 @@ class Triangle
   define_method(:is_triangle?) do
     @side_one.+(@side_two).>(@hypotenuse)
   end
+
+  define_method(:type) do
+    if
+      !is_triangle?
+      "Not triangle"
+    elsif
+      @side_one.==(@side_two).&(@side_one.==(@hypotenuse))
+      "equilateral"
+    elsif
+      @side_one.==(@side_two).|(@side_one.==(@hypotenuse)).|(@side_two.==(@hypotenuse))
+      "isosceles"
+    else
+      "scalene"
+    end
+  end
 end
