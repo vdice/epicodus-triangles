@@ -1,0 +1,5 @@
+<% if !@triangle.is_triangle?() %>
+  <h2>The numbers you have entered do not form a triangle!</h2>
+<% else %>
+  <h2>Your triangle is a <%= @triangle.type() %>
+<% end %>
